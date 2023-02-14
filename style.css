@@ -1,0 +1,138 @@
+*{
+    padding: 0;
+     margin: 0;
+     box-sizing: border-box;
+     font-family: 'Open Sans', sans-serif;
+     font-family: 'Poppins', sans-serif;
+ } 
+
+ /* .container,.container1{
+    display: grid;
+    background: lightcoral;
+    color: black;
+    height: 50vh;
+ }
+
+ .item{
+    margin: auto;
+ } */
+
+ /* .container1{
+    background: lightgreen;
+    grid-template-columns: minmax(auto,700px);
+    justify-content: center;
+    align-content: center;
+
+ }
+
+ .c3{
+    display: grid;
+    max-width: 400px;
+    
+
+ }
+
+ .c3 img{
+    grid-column: 1;
+    grid-row: 1;
+   
+ }
+ .overlay{
+    grid-column: 1;
+    grid-row: 1;
+    align-self: end;
+    
+
+ } */
+
+ .container{
+  
+   height: 100vh;
+   display: grid;
+   font-size: 25px;
+   gap: 5px;
+   color: white;
+    grid-template-columns: 1fr 4fr 1fr;
+    grid-template-rows: 100px auto 100px;
+    grid-template-areas: 
+                        "header header header"
+                        "sidebar main section"
+                        "footer footer footer"; 
+
+    
+    /* grid-template-columns: 1fr 3fr 1fr;
+    grid-template-rows: 100px auto 100px;
+    color: aliceblue;
+    font-size: 25px; */
+    
+
+ }
+
+ 
+
+ .item1{
+    background: rgb(191 175 191);
+    
+    grid-column: 1/4;
+
+    grid-area: header;
+    
+ }
+ .item2{
+    background: rgb(84 84 84);
+    
+    grid-row: 2/3;
+    grid-area: sidebar;
+    
+ }
+ .item3{
+    background:rgb(216, 93, 45);
+    grid-column: 2/3;
+    grid-area: main;
+   
+    
+ }
+ .item4{
+    background: rgb(24, 119, 4);
+    grid-area: section;
+    color: white;
+   
+    
+    
+ }
+
+ .item5{
+
+   background: rgb(144, 192, 62);
+   grid-column: 1/4;
+   grid-area: footer;
+   
+
+ }
+
+ .container > div{
+   display: grid;
+   justify-content: center;
+   align-content: center;
+
+}
+
+
+@media screen and (width <= 600px){
+  
+
+      .container{
+         grid-template-columns: 1fr;
+         grid-template-rows: repeat(5,1fr);
+         grid-template-areas: "header"
+                              "sidebar"
+                              "main"
+                              "section"
+                              "footer";
+      }
+
+      
+      
+      
+   
+}
